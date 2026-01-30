@@ -30,8 +30,8 @@ async def add_user(data: dict, message: types.Message) -> bool | None:
                                                             data.get('language'), data.get('phone_number'),
                                                             data.get('longitude'), data.get('latitude'),)
 
-        execute_query(query=query,params=params)
+        execute_query(query=query, params=params)
         return True
-    except Exception as e :
+    except Exception as e:
         logger.error(msg=e)
         return None

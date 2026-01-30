@@ -1,37 +1,35 @@
-from aiogram.types import ReplyKeyboardMarkup,KeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-share_contact  = ReplyKeyboardMarkup(
+share_contact = ReplyKeyboardMarkup(
     keyboard=[[
-        KeyboardButton(text="☎️ Share phone number",request_contact=True)
-    ]],resize_keyboard=True
+        KeyboardButton(text="☎️ Share phone number", request_contact=True)
+    ]], resize_keyboard=True
 )
 
-share_location  = ReplyKeyboardMarkup(
+share_location = ReplyKeyboardMarkup(
     keyboard=[[
-        KeyboardButton(text="📍 Share my location",request_location=True)
-    ]],resize_keyboard=True
+        KeyboardButton(text="📍 Share my location", request_location=True)
+    ]], resize_keyboard=True
 )
 
 user_main_menu = ReplyKeyboardMarkup(
     keyboard=[
         [
-        KeyboardButton(text="🎓 Course"),
-        KeyboardButton(text="🎉 Events")
+            KeyboardButton(text="🎓 Course"),
+            KeyboardButton(text="🎉 Events")
         ],
         [
-        KeyboardButton(text="☎️ Contacts"),
-        KeyboardButton(text="⚙️ Settings")
+            KeyboardButton(text="☎️ Contacts"),
+            KeyboardButton(text="⚙️ Settings")
         ]
-    ],resize_keyboard=True
+    ], resize_keyboard=True
 )
-
-
 
 courses = ReplyKeyboardMarkup(
     keyboard=[
         [
-        KeyboardButton(text="🐍 Backend (Python)"),
-        KeyboardButton(text="🔒 Cyber Security")
+            KeyboardButton(text="🐍 Backend (Python)"),
+            KeyboardButton(text="🔒 Cyber Security")
         ],
         [
             KeyboardButton(text="🧩 Graphic Design"),
@@ -40,5 +38,5 @@ courses = ReplyKeyboardMarkup(
         [
             KeyboardButton(text="⬅️ Back")
         ]
-    ],resize_keyboard=True
+    ], resize_keyboard=True
 )

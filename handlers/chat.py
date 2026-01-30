@@ -17,7 +17,7 @@ async def chat_course_handler(message: types.Message, state: FSMContext):
 
 @router.message(RegisterState.courses, F.text == "🐍 Backend (Python)")
 async def chat_backend_handler(message: types.Message, state: FSMContext):
-    text = "🐍 Backend (Python)"
+    text = "📌 Backend kursi\n\nPython, PostgreSQL va API larni organasiz.\nDavomiyligi: 8 oy"
     await message.answer(text=text, reply_markup=courses)
     await state.set_state(RegisterState.courses)
 
@@ -51,7 +51,23 @@ async def chat_backend_handler(message: types.Message, state: FSMContext):
 
 
 @router.message(F.text == "☎️ Contacts")
-async def chat_contacts_handler(message:types.Message):
-    text = "☎️ Contacts"
+async def chat_contacts_handler(message: types.Message):
+    text = """Najot Talim filiallari:
 
-    await message.answer(text=text,reply_markup=user_main_menu)
+        1 Shayxontohur
+        📍 Manzil: Toshkent, Shayxontohur tumani
+        📞 Telefon: +998 71 200-00-01
+
+        2 Chilonzor
+        📍 Manzil: Toshkent, Chilonzor tumani
+        📞 Telefon: +998 71 200-00-02
+
+        3 Yunusobod
+        📍 Manzil: Toshkent, Yunusobod tumani
+        📞 Telefon: +998 71 200-00-03
+
+        4 Mirzo Ulugbek
+        📍 Manzil: Toshkent, Mirzo Ulugbek tumani
+        📞 Telefon: +998 71 200-00-04"""
+
+    await message.answer(text=text, reply_markup=user_main_menu)

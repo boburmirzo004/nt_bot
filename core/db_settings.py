@@ -44,8 +44,8 @@ class DatabaseManager:
         return self.cursor.fetchall()
 
 
-def execute_query(query: str,params: Union[tuple, dict, None] = None,
-        fetch: Union[str, None] = None) -> DictRow | None | list[tuple[Any, ...]] | bool:
+def execute_query(query: str, params: Union[tuple, dict, None] = None,
+                  fetch: Union[str, None] = None) -> DictRow | None | list[tuple[Any, ...]] | bool:
     try:
         with DatabaseManager() as db:
             if fetch == "one":
